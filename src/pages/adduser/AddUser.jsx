@@ -70,14 +70,12 @@ const Form = () => {
         }
       );
 
-      console.log(response.data);
-
       if (response.data.success) {
-        console.log(response.data.message);
         navigate("/");
       } else {
         setError(response.data.message);
       }
+      console.log(response.data.message);
     } catch (error) {
       setError("An error occurred during data processing with the server");
       console.error("Failed to add a user:", error.message);

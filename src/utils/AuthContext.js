@@ -50,8 +50,12 @@ export const AuthProvider = ({ children }) => {
     const storedAuthState = localStorage.getItem("authState");
     if (storedAuthState) {
       const parsedAuthState = JSON.parse(storedAuthState);
-      console.log("Parsed Auth State:", parsedAuthState);
-      dispatch({ type: "LOGOUT", payload: parsedAuthState.user });
+      let type = "";
+      if (parsedAuthState.user) {
+        type = "LOGIN";
+      } else type = "LOGOUT";
+
+      dispatch({ type: type, payload: parsedAuthState.user });
     }
   }, []);
 

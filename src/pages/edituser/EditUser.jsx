@@ -43,10 +43,11 @@ const Form = () => {
       if (response.data.success) {
         setEmail(response.data.user.email);
         setPassword(response.data.user.password);
-        console.log(response.data.message);
       } else {
         setError("Failed to retrieve User details");
       }
+
+      console.log(response.data.message);
     } catch (error) {
       console.error(`Failed getting details of User ${id}:`, error.message);
     }
