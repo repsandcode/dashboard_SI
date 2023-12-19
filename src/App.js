@@ -8,8 +8,8 @@ function App() {
     <div className="container-lg">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PrivateRoute />}>
-            <Route index element={<Dashboard />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/" element={<Dashboard />} />
             <Route path="/user/add" element={<AddUser />} />
             <Route path="/user/:id/edit" element={<EditUser />} />
           </Route>
