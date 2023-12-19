@@ -4,7 +4,11 @@ import { useAuth } from "../../utils/AuthContext";
 const Banner = () => {
   const { state } = useAuth();
 
-  const email = state.user.email;
+  let email = "";
+
+  if (state.user) {
+    email = state.user.email;
+  }
 
   return (
     <div className="pt-5">

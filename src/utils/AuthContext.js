@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
     if (storedAuthState) {
       const parsedAuthState = JSON.parse(storedAuthState);
       console.log("Parsed Auth State:", parsedAuthState);
-      dispatch({ type: "LOGIN", payload: parsedAuthState.user });
+      dispatch({ type: "LOGOUT", payload: parsedAuthState.user });
     }
   }, []);
 

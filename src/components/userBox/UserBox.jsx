@@ -22,7 +22,7 @@ const UserBox = ({ user, isCurrentUser, deleteUser }) => {
         isCurrentUser ? "bg-blue text-white" : "bg-white"
       }`}
     >
-      <p className="fs-4">{user.email}</p>
+      <p className="fs-4">{user?.email || ""}</p>
 
       <div className="d-flex align-items-center justify-content-between mb-5">
         <input
