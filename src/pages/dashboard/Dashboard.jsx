@@ -88,7 +88,7 @@ const Dashboard = () => {
   return (
     <div className="py-4">
       <Header />
-      <Banner />
+      <Banner user={currentUser} />
 
       {/* current_user */}
       <main className="row py-5 border-bottom">

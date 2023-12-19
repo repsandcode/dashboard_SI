@@ -1,20 +1,11 @@
 import React from "react";
-import { useAuth } from "../../utils/AuthContext";
 
-const Banner = () => {
-  const { state } = useAuth();
-
-  let email = "";
-
-  if (state.user) {
-    email = state.user.email;
-  }
-
+const Banner = ({ user }) => {
   return (
     <div className="pt-5">
       <h2 className="fw-light">
         Welcome,
-        <span className="blue-color"> {email}</span>
+        <span className="blue-color"> {user.email}</span>
       </h2>
     </div>
   );
