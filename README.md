@@ -1,6 +1,6 @@
 ### ServingIntel Dashboard
 
-A pet project developed while under an internship as a Software Developer for ServingIntel
+A pet project developed while under internship as a Software Developer for ServingIntel
 
 #### Tech Stack
 
