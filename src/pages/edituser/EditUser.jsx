@@ -100,6 +100,7 @@ const Form = () => {
         navigate("/");
       } else {
         console.log(response.data.message);
+        setError(response.data.message);
       }
     } catch (error) {
       setError("An error occurred during data processing with the server");
