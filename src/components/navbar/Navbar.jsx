@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Heading = ({ page, usersCount }) => {
+const Heading = ({ page, usersCount, email }) => {
   switch (page) {
     case "dashboard":
       return (
@@ -35,7 +35,7 @@ const Heading = ({ page, usersCount }) => {
               <span className="material-icons fs-3">arrow_back</span>
             </button>
           </Link>
-          <h2 className="fw-light align-self-center m-0">Edit User</h2>
+          <h2 className="fw-light align-self-center m-0">Edit {email}</h2>
         </div>
       );
     default:
@@ -43,10 +43,10 @@ const Heading = ({ page, usersCount }) => {
   }
 };
 
-const Navbar = ({ page, usersCount }) => {
+const Navbar = ({ page, usersCount, email }) => {
   return (
     <div className="py-5">
-      <Heading page={page} usersCount={usersCount} />
+      <Heading page={page} usersCount={usersCount} email={email} />
     </div>
   );
 };
