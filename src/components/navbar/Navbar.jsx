@@ -45,7 +45,7 @@ const Heading = ({ page, usersCount }) => {
 
 const Navbar = ({ page, usersCount }) => {
   return (
-    <div className="py-5 mb-3">
+    <div className="py-5">
       <Heading page={page} usersCount={usersCount} />
     </div>
   );
