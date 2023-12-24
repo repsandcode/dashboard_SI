@@ -21,6 +21,10 @@ body {
   color: var(--blue);
 }
 
+.orange-color {
+  color: var(--orange);
+}
+
 .bg-blue {
   background: var(--blue);
 }
