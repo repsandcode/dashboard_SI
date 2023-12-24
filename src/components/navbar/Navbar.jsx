@@ -35,7 +35,9 @@ const Heading = ({ page, usersCount, email }) => {
               <span className="material-icons fs-3">arrow_back</span>
             </button>
           </Link>
-          <h2 className="fw-light align-self-center m-0">Edit {email}</h2>
+          <h2 className="fw-light align-self-center m-0">
+            Edit <span className="orange-color">{email}</span>
+          </h2>
         </div>
       );
     default:
