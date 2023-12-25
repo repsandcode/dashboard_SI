@@ -101,9 +101,7 @@ const Dashboard = () => {
         </div>
       </main>
 
-      <div className="text-body-tertiary">
-        <hr />
-      </div>
+      <div className="border-top my-1 mt-2"></div>
 
       <Navbar page={"dashboard"} usersCount={otherUsers.length} />
 
