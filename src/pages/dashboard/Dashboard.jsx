@@ -91,7 +91,7 @@ const Dashboard = () => {
       <Banner user={currentUser} />
 
       {/* current_user */}
-      <main className="row py-5 border-bottom">
+      <main className="row py-5">
         <div className="col-sm-6 col-lg-4 col-xxl-3">
           <UserBox
             user={currentUser}
@@ -100,6 +100,10 @@ const Dashboard = () => {
           />
         </div>
       </main>
+
+      <div className="text-body-tertiary">
+        <hr />
+      </div>
 
       <Navbar page={"dashboard"} usersCount={otherUsers.length} />
 
