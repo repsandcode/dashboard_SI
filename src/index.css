@@ -25,6 +25,10 @@ body {
   color: var(--orange);
 }
 
+.red-color {
+  color: var(--red);
+}
+
 .bg-blue {
   background: var(--blue);
 }
@@ -37,16 +41,10 @@ body {
   background: var(--red);
 }
 
-.box-radius {
-  border-radius: 20px;
-}
-
-.btn-radius {
-  border-radius: 14px;
-}
-
+.box-radius,
+.btn-radius,
 .input-radius {
-  border-radius: 14px;
+  border-radius: 2rem;
 }
 
 .pointer {
