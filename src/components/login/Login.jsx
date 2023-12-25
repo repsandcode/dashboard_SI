@@ -67,9 +67,8 @@ const Login = () => {
 
       <form onSubmit={handleLogin}>
         <div className="form-group mb-4">
-          {/* <label htmlFor="email">Email:</label> */}
           <input
-            className="form-control p-3 fs-4"
+            className="form-control p-3 fs-4 input-radius"
             id="email"
             type="email"
             placeholder="Email"
@@ -82,9 +81,8 @@ const Login = () => {
         </div>
 
         <div className="form-group mb-4">
-          {/* <label htmlFor="password">Password:</label> */}
           <input
-            className="form-control p-3 fs-4"
+            className="form-control p-3 fs-4 input-radius"
             id="password"
             type="password"
             placeholder="Password"
@@ -95,7 +93,7 @@ const Login = () => {
         </div>
 
         <button
-          className="btn btn-primary bg-blue border-0 text-white w-100 p-3 fs-4"
+          className="btn btn-primary bg-blue border-0 text-white w-100 p-3 fs-4 input-radius"
           type="submit"
           disabled={loading}
         >
