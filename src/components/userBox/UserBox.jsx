@@ -8,26 +8,23 @@ const DeleteModal = ({ id, email, onConfirm, onCancel }) => {
   return (
     <div className="delete-modal">
       <div className="delete-modal__content">
-        <h1 className="fs-3 lh-sm">
-          Are you sure you want to delete{" "}
-          <span className="red-color">{email}</span>?
-        </h1>
+        <h1 className="fs-3">Are you sure you want to delete {email}?</h1>
 
         <p className="text-secondary fs-4 py-5">
           This action cannot be undone.
         </p>
 
-        <div className="w-100 d-flex gap-3">
+        <div className="w-100 d-flex gap-3 flex-column-reverse">
           <button
             type="button"
-            className="w-50 px-4 py-2 fs-4 btn-radius border bg-transparent"
+            className="py-3 fs-4 btn-radius border bg-transparent"
             onClick={onCancel}
           >
             Close
           </button>
           <button
             type="button"
-            className="w-50 px-4 py-2 fs-4 btn-radius border-0 bg-red text-white"
+            className="py-3 fs-4 btn-radius border-0 bg-red text-white"
             onClick={() => {
               onConfirm(id);
               onCancel();
@@ -99,14 +96,6 @@ const UserBox = ({ user, isCurrentUser, deleteUser }) => {
           </button>
         </Link>
 
-        {/* <button
-          className="px-4 py-2 fs-5 btn-radius border-0 bg-red text-white"
-          onClick={() => deleteUser(user.id)}
-        >
-          Delete
-        </button> */}
-
-        {/* <!-- Button trigger modal --> */}
         <button
           type="button"
           className="px-4 py-2 fs-5 btn-radius border-0 bg-red text-white"
@@ -123,44 +112,6 @@ const UserBox = ({ user, isCurrentUser, deleteUser }) => {
             onCancel={handleDeleteCancel}
           />
         )}
-
-        {/* <!-- Modal -->
-        <div
-          className="modal text-dark"
-          id={`${user.id}`}
-          tabIndex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-dialog-centered p-5">
-            <div className="modal-content d-flex flex-column align-items-center p-5 box-radius">
-              <h1 className="modal-title fs-3" id="exampleModalLabel">
-                Are you sure you want to delete this user?
-              </h1>
-
-              <p className="modal-body text-secondary fs-4 py-5">
-                This action cannot be undone.
-              </p>
-
-              <div className="w-100 d-flex gap-3">
-                <button
-                  type="button"
-                  className="w-50 px-4 py-2 fs-4 btn-radius border bg-transparent"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button
-                  type="button"
-                  className="w-50 px-4 py-2 fs-4 btn-radius border-0 bg-red text-white"
-                  onClick={() => deleteUser(user.id)}
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
