@@ -10,6 +10,7 @@ const EditUser = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [titleEmail, setTitleEmail] = useState("");
 
   const { id } = useParams();
   const { logout } = useAuth();
@@ -41,6 +42,7 @@ const EditUser = () => {
       );
 
       if (response.data.success) {
+        setTitleEmail(response.data.user.email);
         setEmail(response.data.user.email);
         setPassword(response.data.user.password);
       } else {
@@ -111,7 +113,7 @@ const EditUser = () => {
   return (
     <div className="py-4">
       <Header />
-      <Navbar page={"edit"} email={email} />
+      <Navbar page={"edit"} email={titleEmail} />
 
       <main className="row g-0">
         <div className="col-xs-8 col-sm-6 bg-white box-radius p-5">
