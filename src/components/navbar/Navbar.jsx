@@ -10,7 +10,7 @@ const Heading = ({ page, usersCount, email }) => {
             Other Users (<span>{usersCount})</span>
           </h2>
           <Link to="/user/add" className="text-decoration-none">
-            <button className="border-0 px-4 py-3 box-radius fs-4 bg-blue text-white fw-light d-flex align-items-center">
+            <button className="border-0 btn-radius p-3 fs-4 bg-blue text-white fw-light d-flex align-items-center">
               <span className="material-icons fs-3 me-2">add</span> Add User
             </button>
           </Link>
