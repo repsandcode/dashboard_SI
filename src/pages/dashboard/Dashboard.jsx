@@ -12,6 +12,30 @@ const Dashboard = () => {
   const { state } = useAuth();
   const [currentUser, setCurrentUser] = useState([]);
   const [otherUsers, setOtherUsers] = useState([]);
+  const [greeting, setGreeting] = useState("Welcome");
+
+  useEffect(() => {
+    const getCurrentTime = () => {
+      const currentHour = new Date().getHours();
+
+      if (currentHour >= 6 && currentHour < 12) {
+        setGreeting("Good morning");
+      } else if (currentHour >= 12 && currentHour < 18) {
+        setGreeting("Good afternoon");
+      } else {
+        setGreeting("Good evening");
+      }
+    };
+
+    // Call the function once to set the initial greeting
+    getCurrentTime();
+
+    // Update the greeting every minute
+    const intervalId = setInterval(getCurrentTime, 60000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array ensures that useEffect runs only once
 
   useEffect(() => {
     // Call function getUsers()
@@ -88,7 +112,7 @@ const Dashboard = () => {
   return (
     <div className="py-4">
       <Header />
-      <Banner user={currentUser} />
+      <Banner user={currentUser} greeting={greeting} />
 
       {/* current_user */}
       <main className="row py-5">
@@ -106,7 +130,7 @@ const Dashboard = () => {
       <Navbar page={"dashboard"} usersCount={otherUsers.length} />
 
       {/* other_users */}
-      <section className="row row-gap-4">
+      <section className="pb-5 row row-gap-4">
         {otherUsers.map((user, key) => (
           <div key={key} className="col-sm-6 col-lg-4 col-xxl-3">
             <UserBox

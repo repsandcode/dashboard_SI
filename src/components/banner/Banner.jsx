@@ -1,11 +1,10 @@
 import React from "react";
 
-const Banner = ({ user }) => {
+const Banner = ({ user, greeting }) => {
   return (
     <div className="pt-5">
       <h2 className="fw-light">
-        Welcome,
-        <span className="blue-color"> {user.email}</span>
+        {greeting},<span className="blue-color"> {user.email}</span>
       </h2>
     </div>
   );
