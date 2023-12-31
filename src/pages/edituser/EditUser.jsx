@@ -116,7 +116,7 @@ const EditUser = () => {
       <Navbar page={"edit"} email={titleEmail} />
 
       <main className="row g-0">
-        <div className="col-xs-8 col-sm-6 bg-white box-radius p-5">
+        <div className="col-sm-8 col-md-7 col-lg-6 col-xl-5 bg-white box-radius p-5">
           {error && <span className="fs-4 text-danger">{error}</span>}
 
           <form onSubmit={handleEditUser}>
